@@ -32,9 +32,6 @@ function Catalogo() {
             </div>
 
             <div className="catalogo-buttons">
-              <a href="/catalogo1.pdf" target="_blank" className="btn">
-                Ver completo
-              </a>
 
               <a href="/catalogo1.pdf" download className="btn">
                 Descargar
@@ -68,9 +65,6 @@ function Catalogo() {
             </div>
 
             <div className="catalogo-buttons">
-              <a href="/catalogo2.pdf" target="_blank" className="btn">
-                Ver completo
-              </a>
 
               <a href="/catalogo2.pdf" download className="btn">
                 Descargar
