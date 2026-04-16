@@ -20,7 +20,10 @@ function Catalogo() {
 
               {/* MOBILE */}
               <div className="pdf-mobile">
-                <img src="/catalogo1.jpg" alt="Catálogo General" />
+                <img
+                  src="https://i.imgur.com/dLXjvdK.png"
+                  alt="Catálogo General"
+                />
 
                 <a href="/catalogo1.pdf" target="_blank" className="btn">
                   Ver catálogo completo
@@ -53,7 +56,10 @@ function Catalogo() {
 
               {/* MOBILE */}
               <div className="pdf-mobile">
-                <img src="/catalogo2.jpg" alt="Catálogo Unlock" />
+                <img
+                  src="https://i.imgur.com/07nBdiw.png"
+                  alt="Catálogo Unlock"
+                />
 
                 <a href="/catalogo2.pdf" target="_blank" className="btn">
                   Ver catálogo completo
