@@ -193,6 +193,12 @@ h2 {
   border: none;
 }
 
+/* CONTENEDOR */
+.pdf-container {
+  position: relative;
+  overflow: hidden;
+}
+
 /* MOBILE (oculto por defecto) */
 .pdf-mobile {
   display: none;
@@ -205,13 +211,14 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* RESPONSIVE */
+/* 📱 RESPONSIVE */
 @media (max-width: 768px) {
   .pdf {
-    display: none;
+    display: none !important;
+    height: 0 !important;
   }
 
   .pdf-mobile {
-    display: block;
+    display: block !important;
   }
 }
