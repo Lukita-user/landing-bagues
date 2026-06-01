@@ -21,7 +21,7 @@ function Catalogo() {
               {/* MOBILE */}
               <div className="pdf-mobile">
                 <img
-                  src="https://i.imgur.com/e7kPtyI.jpeg"
+                  src="https://i.imgur.com/szs8raP.jpeg"
                   alt="Catálogo General"
                 />
 
@@ -54,7 +54,7 @@ function Catalogo() {
               {/* MOBILE */}
               <div className="pdf-mobile">
                 <img
-                  src="https://i.imgur.com/nPtHw9H.jpeg"
+                  src="https://i.imgur.com/YmLkewn.jpeg"
                   alt="Catálogo Unlock"
                 />
 
