@@ -1,78 +1,66 @@
+import { catalogos } from "../data/catalogos";
+
 function Catalogo() {
   return (
-    <section id="catalogo" className="catalogo">
+    <section
+      id="catalogo"
+      className="catalogo"
+    >
       <div className="container">
+
         <h2>Catálogos Bagués</h2>
 
-        <div className="catalogos-grid">
+        {catalogos.map((catalogo) => (
+          <div
+            key={catalogo.id}
+            className="catalogo-card"
+          >
 
-          {/* CATALOGO 1 */}
-          <div className="catalogo-card">
-            <h3>CATÁLOGO GENERAL</h3>
+            <h3>{catalogo.nombre}</h3>
 
             <div className="pdf-container">
-              {/* PC */}
-              <iframe
-                src="/catalogo1.pdf#toolbar=0"
-                title="Catalogo 1"
-                className="pdf"
-              ></iframe>
 
-              {/* MOBILE */}
+              <iframe
+                src={`${catalogo.pdf}#toolbar=0`}
+                title={catalogo.nombre}
+                className="pdf"
+              />
+
               <div className="pdf-mobile">
+
                 <img
-                  src="https://i.imgur.com/szs8raP.jpeg"
-                  alt="Catálogo General"
+                  src={catalogo.portada}
+                  alt={catalogo.nombre}
                 />
 
-                <a href="/catalogo1.pdf" target="_blank" className="btn">
+                <a
+                  href={catalogo.pdf}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn"
+                >
                   Ver catálogo completo
                 </a>
+
               </div>
+
             </div>
 
             <div className="catalogo-buttons">
 
-              <a href="/catalogo1.pdf" download className="btn">
+              <a
+                href={catalogo.pdf}
+                download
+                className="btn"
+              >
                 Descargar
               </a>
+
             </div>
+
           </div>
+        ))}
 
-          {/* CATALOGO 2 */}
-          <div className="catalogo-card">
-            <h3>CATÁLOGO UNLOCK</h3>
-
-            <div className="pdf-container">
-              {/* PC */}
-              <iframe
-                src="/catalogo2.pdf#toolbar=0"
-                title="Catalogo 2"
-                className="pdf"
-              ></iframe>
-
-              {/* MOBILE */}
-              <div className="pdf-mobile">
-                <img
-                  src="https://i.imgur.com/YmLkewn.jpeg"
-                  alt="Catálogo Unlock"
-                />
-
-                <a href="/catalogo2.pdf" target="_blank" className="btn">
-                  Ver catálogo completo
-                </a>
-              </div>
-            </div>
-
-            <div className="catalogo-buttons">
-
-              <a href="/catalogo2.pdf" download className="btn">
-                Descargar
-              </a>
-            </div>
-          </div>
-
-        </div>
       </div>
     </section>
   );

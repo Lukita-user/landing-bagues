@@ -1,23 +1,14 @@
 function Hero() {
   return (
-    <section className="hero">
+    <section id="inicio" className="hero">
       <div className="container">
-        <img src="/logo.webp" alt="Motivación Bagués" className="logo" />
 
-        <div className="hero-buttons">
-          <a href="#catalogo" className="btn">
-            Ver catálogo
-          </a>
-
-          <a
-            href="https://wa.me/5491134705433"
-            target="_blank"
-            rel="noreferrer"
-            className="btn"
-          >
-            Quiero vender/comprar
-          </a>
-        </div>
+        <img
+          src="/logo.webp"
+          alt="Motivación Bagués"
+          className="logo"
+        />
+       <p>🌟 ¡Para comprar o sumarte habla a nuestro Whatsapp! 🌟</p>
       </div>
     </section>
   );

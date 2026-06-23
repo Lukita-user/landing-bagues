@@ -1,224 +1,415 @@
-/* RESET */
+/* =========================
+RESET
+========================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+  }
 
-/* BASE */
+/* =========================
+BASE
+========================= */
+
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f8f8fb;
-  color: #222;
-  line-height: 1.5;
+font-family: "Segoe UI", Arial, sans-serif;
+background: #f8f8fb;
+color: #222;
+line-height: 1.5;
 }
 
-/* CONTENEDOR GLOBAL */
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 50px 20px;
-  text-align: center;
+max-width: 1100px;
+margin: 0 auto;
+padding: 60px 20px;
+text-align: center;
 }
 
-.logo {
-  width: 250px;
-  max-width: 80%;
-  margin-bottom: 20px;
-}
+/* =========================
+TITULOS
+========================= */
 
-/* TITULOS */
 h1 {
-  font-size: 2.4rem;
-  margin-bottom: 15px;
+font-size: 2.5rem;
+margin-bottom: 15px;
 }
 
 h2 {
-  font-size: 1.9rem;
-  margin-bottom: 20px;
+font-size: 2rem;
+margin-bottom: 25px;
 }
 
-/* BOTONES */
+h3 {
+margin-bottom: 10px;
+}
+
+/* =========================
+BOTONES
+========================= */
+
 .btn {
-  display: inline-block;
-  background: #ff509b;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 30px;
-  text-decoration: none;
-  margin: 10px 5px;
-  transition: 0.3s;
-  font-weight: 600;
+display: inline-block;
+background: #ff509b;
+color: white;
+padding: 12px 25px;
+border-radius: 30px;
+text-decoration: none;
+margin: 5px;
+transition: 0.3s;
+font-weight: 600;
 }
 
 .btn:hover {
-  background: #b02a6e;
+background: #b02a6e;
 }
 
-/* HERO */
+/* =========================
+NAVBAR
+========================= */
+
+.navbar {
+background: white;
+border-bottom: 1px solid #eee;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.navbar-container {
+max-width: 1100px;
+margin: auto;
+
+padding: 15px 20px;
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.navbar-logo {
+text-decoration: none;
+color: #ff509b;
+font-weight: bold;
+font-size: 1.1rem;
+}
+
+.navbar-links {
+display: flex;
+gap: 20px;
+align-items: center;
+}
+
+.navbar-links a {
+text-decoration: none;
+color: #333;
+font-weight: 500;
+}
+
+.navbar-links a:hover {
+color: #ff509b;
+}
+
+.navbar-whatsapp {
+background: #ff509b;
+color: white !important;
+padding: 8px 15px;
+border-radius: 25px;
+}
+
+/* =========================
+HERO
+========================= */
 
 .hero {
-  background-image: url("/fondo2.jpg");
-  background-size: cover;       /* ocupa todo */
-  background-position: center;  /* centrado */
-  background-repeat: no-repeat; /* no se repite */
+background-image: url("/fondo2.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 
-  color: white;
+color: rgb(0, 0, 0);
 }
 
-
 .hero .container {
-  padding: 90px 20px 70px;
+min-height: 70vh;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.logo {
+width: 280px;
+max-width: 90%;
+margin-bottom: 20px;
 }
 
 .hero p {
-  margin-bottom: 20px;
-  opacity: 0.9;
+max-width: 700px;
+margin-bottom: 25px;
 }
+
+/* =========================
+HERO BUTTONS
+========================= */
 
 .hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
+display: flex;
+gap: 15px;
+flex-wrap: wrap;
+justify-content: center;
 }
 
-/* CATALOGO */
-.catalogo {
-  background: #fff;
+/* =========================
+COMO TRABAJAMOS
+========================= */
+
+.como-trabajamos {
+background: #fff5fa;
 }
 
-.catalogo .container {
-  padding: 30px 20px;
+/* =========================
+   TUTORIALES
+========================= */
+
+.tutoriales {
+  background: white;
 }
 
-.catalogo-card {
-  margin-bottom: 30px;
+.tutoriales-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(350px, 1fr));
+
+  gap: 25px;
 }
 
-.catalogo .pdf {
+.tutorial-card {
+  background: white;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  border: 1px solid #eee;
+
+  transition: .3s;
+}
+
+.tutorial-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.08);
+}
+
+.tutorial-video {
   width: 100%;
-  max-width: 900px;
-  height: 420px;
-  margin: 20px auto;
+  height: 250px;
+
   display: block;
-  border-radius: 10px;
-  border: none;
+
+  background: black;
 }
 
-.catalogo-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+.tutorial-content {
+  padding: 20px;
 }
 
-/* BENEFICIOS */
+.tutorial-content h3 {
+  margin-bottom: 10px;
+}
+
+.tutorial-content p {
+  color: #666;
+}
+
+/* =========================
+TUTORIALS MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .tutoriales-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tutorial-video {
+    height: 200px;
+  }
+
+}
+
+/* =========================
+BENEFICIOS
+========================= */
+
 .beneficios {
-  background: #f8f8fb;
+background: #f8f8fb;
 }
 
-.beneficios .container {
-  padding: 40px 20px;
-}
+/* =========================
+GRID COMPARTIDO
+========================= */
 
 .beneficios-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
 }
 
 .beneficio-card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  border: 1px solid #eee;
-  transition: 0.3s;
+background: white;
+padding: 25px;
+border-radius: 12px;
+border: 1px solid #eee;
+transition: 0.3s;
 }
 
 .beneficio-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+transform: translateY(-5px);
+box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
-/* CTA */
-.cta {
-  background-image: url("/fondo2.jpg");
-  background-size: cover;       /* ocupa todo */
-  background-position: center;  /* centrado */
-  background-repeat: no-repeat; /* no se repite */
+/* =========================
+CATALOGO
+========================= */
 
-  color: white;
-}
-.cta .container {
-  padding: 70px 20px;
+.catalogo {
+background: white;
 }
 
-.cta .btn .cta .btn {
-  background: white;
-  color: #ff509b;
+.catalogo-card {
+margin-bottom: 40px;
 }
 
-.cta h2 {
-  color: #ff509b;
+.catalogo .pdf {
+width: 100%;
+max-width: 900px;
+height: 420px;
+
+margin: 20px auto;
+
+display: block;
+
+border: none;
+border-radius: 12px;
 }
 
-.cta .btn:hover {
-  background: #f1f1f1;
+.catalogo-buttons {
+display: flex;
+justify-content: center;
+gap: 10px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .opciones-grid {
-    grid-template-columns: 1fr; /* en celular sí 1 columna */
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-  }
-}
+/* =========================
+PDF MOBILE
+========================= */
 
 .pdf-container {
-  position: relative;
+position: relative;
+overflow: hidden;
 }
 
-/* PC */
-.pdf {
-  width: 100%;
-  height: 500px;
-  border-radius: 12px;
-  border: none;
-}
-
-/* CONTENEDOR */
-.pdf-container {
-  position: relative;
-  overflow: hidden;
-}
-
-/* MOBILE (oculto por defecto) */
 .pdf-mobile {
-  display: none;
-  text-align: center;
+display: none;
 }
 
 .pdf-mobile img {
-  width: 100%;
-  border-radius: 15px;
-  margin-bottom: 15px;
+width: 100%;
+border-radius: 15px;
+margin-bottom: 15px;
 }
 
-/* 📱 RESPONSIVE */
-@media (max-width: 768px) {
-  .pdf {
-    display: none !important;
-    height: 0 !important;
-  }
+/* =========================
+CTA
+========================= */
 
-  .pdf-mobile {
-    display: block !important;
-  }
+.cta {
+background-image: url("/fondo2.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+color: #000000;;
+}
+
+.cta .container {
+padding: 70px 20px;
+}
+
+/* =========================
+WHATSAPP
+========================= */
+
+.whatsapp-float {
+position: fixed;
+
+right: 20px;
+bottom: 20px;
+
+width: 60px;
+height: 60px;
+
+border-radius: 50%;
+
+background: #b4ffc6;
+color: white;
+
+text-decoration: none;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+font-size: 28px;
+
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+z-index: 999;
+}
+
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+.navbar-container {
+flex-direction: column;
+gap: 12px;
+}
+
+.navbar-links {
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
+}
+
+.logo {
+width: 220px;
+}
+
+h1 {
+font-size: 2rem;
+}
+
+h2 {
+font-size: 1.6rem;
+}
+
+.pdf {
+display: none !important;
+}
+
+.pdf-mobile {
+display: block !important;
+}
 }

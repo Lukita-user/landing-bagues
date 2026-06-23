@@ -2,12 +2,14 @@ function CTA() {
   return (
     <section className="cta">
       <div className="container">
-        <h2>Elegí tu camino</h2>
+
+        <h2>¿List@ para comenzar?</h2>
+
+        <p>
+          Estamos para acompañarte en cada paso de tu crecimiento.
+        </p>
 
         <div className="hero-buttons">
-          <a href="#catalogo" className="btn">
-            Volver a ver Catalogo
-          </a>
 
           <a
             href="https://wa.me/5491134705433"
@@ -15,9 +17,18 @@ function CTA() {
             rel="noreferrer"
             className="btn"
           >
-            Quiero vender/comprar
+            Comprar/Vender
           </a>
+
+          <a
+            href="#tutoriales"
+            className="btn"
+          >
+            Ver Tutoriales
+          </a>
+
         </div>
+
       </div>
     </section>
   );
