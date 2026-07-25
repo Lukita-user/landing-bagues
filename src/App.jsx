@@ -1,6 +1,7 @@
 import "./App.css";
 
-import Navbar from "./components/Navbar";
+// CORREGIDO: Se quitaron las llaves de Navbar
+import Navbar from "./components/Navbar"; 
 import Hero from "./components/Hero";
 import ComoTrabajamos from "./components/ComoTrabajamos";
 import Tutoriales from "./components/Tutoriales";
@@ -21,7 +22,6 @@ function App() {
       <Catalogo />
       
       <Tutoriales />
-
 
       <Beneficios />
 
